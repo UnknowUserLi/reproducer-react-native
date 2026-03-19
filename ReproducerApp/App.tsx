@@ -11,9 +11,12 @@ import {
   SafeAreaProvider,
   useSafeAreaInsets,
 } from 'react-native-safe-area-context';
+import navigation from './navigation';
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
+
+  navigation.setRootNavigation();
 
   return (
     <SafeAreaProvider>
